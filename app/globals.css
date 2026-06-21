@@ -1,0 +1,269 @@
+/* ============================================
+   GLOBAL STYLES — NEOBRUTALISM PORTFOLIO
+   ============================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === CSS VARIABLES === */
+:root {
+  --color-cream: #fffbf0;
+  --color-yellow: #ffe135;
+  --color-coral: #ff6b6b;
+  --color-tosca: #4ecdc4;
+  --color-dark: #0a0a0a;
+  --border-width: 3px;
+  --shadow-offset: 5px;
+  --shadow-offset-lg: 8px;
+}
+
+/* === BASE RESET === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  /* Lenis smooth scroll override */
+  height: auto !important;
+  cursor: none;
+}
+
+/* Lenis smooth scroll */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* === SELECTION COLOR === */
+::selection {
+  background: var(--color-yellow);
+  color: var(--color-dark);
+}
+
+/* ============================================
+   NEOBRUTALISM UTILITY CLASSES
+   ============================================ */
+
+/* Neo Card — border + shadow utama */
+.neo-card {
+  border: 3px solid var(--color-dark);
+  box-shadow: 5px 5px 0px var(--color-dark);
+  border-radius: 0px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neo-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--color-dark);
+}
+
+/* Neo Card dengan accent colors */
+.neo-card-yellow {
+  border: 3px solid var(--color-dark);
+  box-shadow: 5px 5px 0px var(--color-yellow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.neo-card-yellow:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--color-yellow);
+}
+
+.neo-card-coral {
+  border: 3px solid var(--color-dark);
+  box-shadow: 5px 5px 0px var(--color-coral);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.neo-card-coral:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--color-coral);
+}
+
+.neo-card-tosca {
+  border: 3px solid var(--color-dark);
+  box-shadow: 5px 5px 0px var(--color-tosca);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.neo-card-tosca:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--color-tosca);
+}
+
+/* Neo Button */
+.neo-btn {
+  border: 3px solid var(--color-dark);
+  box-shadow: 4px 4px 0px var(--color-dark);
+  border-radius: 0px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-dark);
+}
+
+.neo-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px var(--color-dark);
+}
+
+/* === DOT GRID BACKGROUND PATTERN === */
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    var(--color-dark) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 28px 28px;
+}
+
+/* === NOISE TEXTURE OVERLAY === */
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* === MARQUEE / TICKER ANIMATION === */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* === FLOATING ANIMATION === */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+/* === BOUNCE ANIMATION (untuk contact icons) === */
+@keyframes neo-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hover\:animate-bounce-neo:hover {
+  animation: neo-bounce 0.5s ease infinite;
+}
+
+/* === TYPOGRAPHY === */
+.heading-display {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.heading-section {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* === SKILL PILL === */
+.skill-pill {
+  border: 2px solid var(--color-dark);
+  border-radius: 0px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  box-shadow: 3px 3px 0px var(--color-dark);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.skill-pill:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--color-dark);
+}
+
+/* === SECTION DIVIDER (bold stripe) === */
+.neo-divider {
+  height: 4px;
+  background: var(--color-dark);
+  width: 100%;
+}
+
+/* === SCROLLBAR CUSTOM === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark);
+  border: 2px solid var(--color-cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-float,
+  .animate-float-delayed,
+  .animate-marquee {
+    animation: none !important;
+  }
+}
