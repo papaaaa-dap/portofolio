@@ -28,16 +28,16 @@ const projects = [
   },
   {
     id: 2,
-    title: "Slot Simulator Edukasi",
+    title: "Formula One Test",
     description:
-      "Simulasi mesin slot 5x6 yang dirancang untuk edukasi — menunjukkan bagaimana mekanisme judi bekerja dan mengapa rumah selalu menang.",
-    tags: ["JavaScript", "Edukasi", "Game", "Anti-Judi"],
+      "Game balap Formula One sederhana untuk menguji refleks dan kecepatan reaksi dalam mengambil keputusan di lintasan.",
+    tags: ["JavaScript", "Game", "Racing", "Refleks"],
     color: "bg-coral",
     shadowColor: "#FF6B6B",
     status: "Live",
     statusColor: "bg-yellow",
-    github: "https://github.com/papaaaa-dap/janganjudi",
-    demo: "https://papaaaa-dap.github.io/janganjudi/",
+    github: "https://github.com/papaaaa-dap/formula-one-test.git",
+    demo: "https://github.com/papaaaa-dap/formula-one-test",
   },
   {
     id: 3,
