@@ -37,7 +37,7 @@ const projects = [
     status: "Live",
     statusColor: "bg-yellow",
     github: "https://github.com/papaaaa-dap/formula-one-test.git",
-    demo: "https://portofolio-nu-neon.vercel.app/",
+    demo: "https://github.com/papaaaa-dap/formula-one-test.git",
   },
   {
     id: 3,
