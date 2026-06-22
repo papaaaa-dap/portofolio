@@ -14,7 +14,7 @@ import { Mail, Linkedin, Github, ArrowRight, Sparkles, Download, Camera, Message
 const socialLinks = [
   {
     label: "Instagram",
-    handle: "@fajardafa",
+    handle: "@mufajard",
     href: "https://instagram.com/fajardafa",
     icon: Camera,
     bg: "bg-yellow/60",

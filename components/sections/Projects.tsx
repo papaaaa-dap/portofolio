@@ -30,14 +30,14 @@ const projects = [
     id: 2,
     title: "Formula One Test",
     description:
-      "Game balap Formula One sederhana untuk menguji refleks dan kecepatan reaksi dalam mengambil keputusan di lintasan.",
-    tags: ["JavaScript", "Game", "Racing", "Refleks"],
+      "Machine learning model untuk memprediksi hasil balapan Formula One berdasarkan data historis.",
+    tags: ["Python", "Machine Learning", "Data Science"],
     color: "bg-coral",
     shadowColor: "#FF6B6B",
     status: "Live",
     statusColor: "bg-yellow",
     github: "https://github.com/papaaaa-dap/formula-one-test.git",
-    demo: "https://github.com/papaaaa-dap/formula-one-test",
+    demo: "https://portofolio-nu-neon.vercel.app/",
   },
   {
     id: 3,
